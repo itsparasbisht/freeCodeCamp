@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to html</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Introduction to HTML</header>
+        <a href="#Introduction_to_html_overview" class="nav-link">Introduction to html overview</a>
+        <a href="#Getting_started_with_HTML" class="nav-link">Getting started with HTML</a>
+        <a href="#What's_in_the_head?_Metadata_in_HTML" class="nav-link">What's in the head? Metadata in HTML</a>
+        <a href="#HTML_text_fundamentals" class="nav-link">HTML text fundamentals</a>
+        <a href="#Creating_hyperlinks" class="nav-link">Creating hyperlinks</a>
+        <a href="#Document_and_website_structure" class="nav-link">Document and website structure</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_html_overview">
+            <header>Introduction to html overview</header>
+            <h2>Looking to become a front-end web developer?</h2>
+            <p>
+                At its heart, HTML is a fairly simple language made up of elements,
+                which can be applied to pieces of text to give them different meaning
+                in a document (Is it a paragraph? Is it a bulleted list? Is it part of a table?),
+                structure a document into logical sections (Does it have a header? Three columns
+                of content? A navigation menu?), and embed content such as images and videos
+                into a page. This module will introduce the first two of these and introduce
+                fundamental concepts and syntax you need to know to understand HTML.
+            </p>
+            <h2>Prerequisites</h2>
+            <p>
+                Before starting this module, you don't need any previous HTML knowledge,
+                but you should have at least basic familiarity with using computers and using
+                the web passively (i.e., just looking at it and consuming content).
+                You should have a basic work environment set up (as detailed in Installing
+                basic software), and understand how to create and manage files (as detailed in
+                Dealing with files). Both are parts of our Getting started with the web
+                complete beginner's module.
+            </p>
+            <h2>Guides</h2>
+            <p>
+                This module contains the following articles, which will take you through all
+                the basic theory of HTML and provide ample opportunity for you to test out
+                some skills.
+            </p>
+            <ul>
+                <h3>Getting started with HTML</h3>
+                <li>
+                    Covers the absolute basics of HTML, to get you started — we define elements,
+                    attributes, and other important terms, and show where they fit in the language.
+                    We also show how a typical HTML page is structured and how an HTML element is
+                    structured, and explain other important basic language features. Along the way,
+                    we'll play with some HTML to get you interested!
+                </li>
+
+                <h3>What's in the head? Metadata in HTML</h3>
+                <li>
+                    The head of an HTML document is the part that is not displayed in the web browser
+                    when the page is loaded. It contains information such as the page <code>title</code>,
+                    links to CSS (if you want to style your HTML content with CSS), links to custom
+                    favicons, and metadata (data about the HTML, such as who wrote it, and important
+                    keywords that describe the document).
+                </li>
+
+                <h3>HTML text fundamentals</h3>
+                <li>
+                    One of HTML's main jobs is to give text meaning (also known as semantics),
+                    so that the browser knows how to display it correctly. This article looks
+                    at how to use HTML to break up a block of text into a structure of headings
+                    and paragraphs, add emphasis/importance to words, create lists, and more.
+                </li>
+
+                <h3>Creating hyperlinks</h3>
+                <li>
+                    Hyperlinks are really important — they are what makes the web a web.
+                    This article shows the syntax required to make a link and discusses best
+                    practices for links.
+                </li>
+
+                <h3>Advanced  text formatting</h3>
+                <li>
+                    There are many other elements in HTML for formatting text that we didn't
+                    get to in the HTML text fundamentals article. The elements here are less
+                    well-known, but still useful to know about. In this article, you'll learn
+                    about marking up quotations, description lists, computer code and other
+                    related text, subscript and superscript, contact information, and more.
+                </li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Getting_started_with_HTML">
+            <header>Getting started with HTML</header>
+            <h2>What is HTML?</h2>
+            <p>
+                HTML (Hypertext Markup Language) is not a programming language. It is a
+                markup language that tells web browsers how to structure the web pages you visit.
+                It can be as complicated or as simple as the web developer wants it to be.
+                HTML consists of a series of elements, which you use to enclose, wrap, or mark
+                up different parts of content to make it appear or act in a certain way.
+                The enclosing tags can make content into a hyperlink to connect to another page,
+                italicize words, and so on.  For example, consider the following line of text:
+                <u>My cat is very grumpy</u>
+                If we wanted the text to stand by itself, we could specify that it is a
+                paragraph by enclosing it in a paragraph  (<code>&lt;p&gt;</code>) element:
+                <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code>
+            </p>
+            <h2>Anatomy of an HTML element</h2>
+            <img src="refges/grumpy-cat-small.png" alt="">
+            <ul>
+                <h3>The opening tag:</h3>
+                <li>
+                    This consists of the name of the element (in this example,
+                    p for paragraph), wrapped in opening and closing angle brackets.
+                    This opening tag marks where the element begins or starts to take effect.
+                    In this example, it precedes the start of the paragraph text.
+                </li>
+                <h3>The content:</h3>
+                <li>
+                    This is the content of the element. In this example,
+                    it is the paragraph text.
+                </li>
+                <h3>The closing tag:</h3>
+                <li>
+                    This is the same as the opening tag, except that it
+                    includes a forward slash before the element name. This marks where the
+                    element ends. Failing to include a closing tag is a common beginner
+                    error that can produce peculiar results.
+                </li>
+            </ul>
+            <h2>Nesting elements</h2>
+            <p>
+                Elements can be placed within other elements. This is called nesting.
+                If we wanted to state that our cat is very grumpy, we could wrap the
+                word very in a <code>&lt;strong&gt;</code> element, which means that the word is to have
+                    strong(er) text formatting: <br> <br>
+
+                    <code>&lt;p&gt;My cat is&lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code><br> <br>
+                    
+                    There is a right and wrong way to do nesting. In the example above,
+                    we opened the p element first, then opened the strong element.
+                    For proper nesting, we should close the strong element first,
+                    before closing the p.
+                    The following is an example of the wrong way to do nesting: <br><br>
+                    <code>&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+            </p>
+            <h2>Block vs inline elements</h2>
+            <p>
+                There are two important categories of elements to know in HTML:
+                block-level elements and inline elements.
+                <ul>
+                    <li>
+                        Block-level elements form a visible block on a page. A block-level
+                        element appears on a new line following the content that precedes it.
+                        Any content that follows a block-level element also appears on a new line.
+                        Block-level elements are usually structural elements on the page.
+                        For example, a block-level element might represent headings, paragraphs,
+                        lists, navigation menus, or footers. A block-level element wouldn't be
+                        nested inside an inline element, but it might be nested inside another
+                        block-level element.
+                    </li>
+                    <li>
+                        Inline elements are contained within block-level elements, and surround
+                        only small parts of the document’s content (not entire paragraphs or groupings
+                        of content). An inline element will not cause a new line to appear in the
+                        document. It is typically used with text, for example an <code>&lt;a&gt;</code> element creates
+                        a hyperlink, and elements such as
+                        <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code> create emphasis
+                    </li>
+                </ul>
+            </p>
+
+            <h2>Empty elements</h2>
+            <p>
+                Not all elements follow the pattern of an opening tag, content, and a
+                closing tag. Some elements consist of a single tag, which is typically
+                used to insert/embed something in the document. For example, the <code>&lt;img&gt;</code>
+                element embeds an image file onto a page: <br> <br>
+                <code>&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"&gt;</code> <br> <br>
+                This would output the following: <br>
+                <img src="refges/firefox-icon.png" alt="" id="img2">
+            </p>
+            <h2>Anatomy of an HTML document</h2>
+            <p>
+                Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine
+                to form an entire HTML page: <br>
+                <code>
+                    &lt;!DOCTYPE html&gt; <br>
+                    &lt;html&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My test page&lt;/title&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my page&lt;/p&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt; <br>
+                    &lt;/html&gt; <br>
+                </code>
+            </p>
+        </section>
+
+        <section class="main-section" id="What's_in_the_head?_Metadata_in_HTML">
+            <header>What's in the head? Metadata in HTML</header>
+            <h2>What is the HTML head?</h2>
+            <p>
+                The HTML head is the contents of the <code>&lt;head&gt;</code> element—
+                unlike the contents of the <code>&lt;body&gt;</code> element (which are displayed on
+                the page when loaded in a browser), the head's content is not displayed
+                on the page. Instead, the head's job is to contain metadata about the document.
+            </p>
+            <h2>Metadata: the &lt;meta&gt; element</h2>
+            <p>
+                Metadata is data that describes data, and HTML has an "official" way
+                of adding metadata to a document — the <code>&lt;meta&gt;</code> element. Of course, the
+                other stuff we are talking about in this article could also be thought
+                of as metadata too. There are a lot of different types of <code>&lt;meta&gt;</code> elements
+                that can be included in your page's <code>&lt;meta&gt;</code>, but we won't try to explain
+                them all at this stage, as it would just get too confusing.
+                Instead, we'll explain a few things that you might commonly see,
+                just to give you an idea
+            </p>
+            <h2>Applying CSS and JavaScript to HTML</h2>
+            <p>
+                Just about all websites you'll use in the modern day will employ CSS to
+                make them look cool, and JavaScript to power interactive functionality,
+                such as video players, maps, games, and more. These are most commonly
+                applied to a web page using the <code>&lt;link&gt;</code> element and the <code>&lt;script&gt;</code> element,
+                respectively.
+            </p>
+            <ul>
+                <li>
+                    The <code>&lt;link&gt;</code> element should always go inside the head of your document.
+                    This takes two attributes, rel="stylesheet", which indicates that it
+                    is the document's stylesheet, and href, which contains the path to
+                    the stylesheet file: <br><br>
+                    <code>&lt;link rel="stylesheet" href="my-css-file.css"&gt;</code>
+                    
+                </li>
+                <li>
+                    The <code>&lt;script&gt;</code> element should also go into the head,
+                    and should include a src attribute containing the path to the JavaScript
+                    you want to load, and defer, which basically instructs the browser to
+                    load the JavaScript at the same time as the page's HTML. This is useful as
+                    it makes sure that the HTML is all loaded before the JavaScript runs,
+                    so that you don't get errors resulting from JavaScript trying to access an
+                    HTML element that doesn't exist on the page yet. There are actually a number
+                    of ways to handle loading JavaScript on your page, but this is the most
+                    foolproof one to use for modern browsers (for others, read Script loading strategies). <br><br>
+                    <code>&lt;script src="my-js-file.js" defer&gt;</script></code>
+                    
+                </li>
+            </ul>
+            <h2>Setting the primary language of the document</h2>
+            <p>
+                Finally, it's worth mentioning that you can (and really should) set
+                the language of your page. This can be done by adding the lang attribute to
+                the opening HTML tag (as seen in the meta-example.html and shown below.) <br><br>
+                <code>&lt;html lang="en-US"&gt;&lt;/html&gt;</code>
+            </p>
+            <p>
+                This is useful in many ways. Your HTML document will be indexed more
+                effectively by search engines if its language is set (allowing it to appear
+                correctly in language-specific results, for example), and it is useful to
+                people with visual impairments using screen readers (for example, the word "six"
+                exists in both French and English, but is pronounced differently.)
+            </p>
+            <p>
+                You can also set subsections of your document to be recognized as different
+                languages. For example, we could set our Japanese language section to be
+                recognized as Japanese, like so: <br><br>
+                <code>&lt;p&gt;Japanese example: &lt;span lang="ja"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</code><br><br>
+            </p>
+        </section>
+
+        <section class="main-section" id="HTML_text_fundamentals">
+            <header>HTML text fundamentals</header>
+            <h2>The basics: headings and paragraphs</h2>
+            <p>
+                Most structured text consists of headings and paragraphs, whether you are reading a story,
+                a newspaper, a college textbook, a magazine, etc.
+                <img src="refges/newspaper_small.jpeg" alt="">
+                <p>
+                    Structured content makes the reading experience easier and more enjoyable.
+                </p>
+                <p>
+                    In HTML, each paragraph has to be wrapped in a &lt;p&gt; element, like so: <br><br>
+                    <code>&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code>
+                </p>
+                <p>
+                    Each heading has to be wrapped in a heading element: <br><br>
+                    <code>&lt;h1&gt;I am the title of the story.&lt;/h1&gt;</code>
+                </p>
+                <p>
+                    There are six heading elements: &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;,
+                    &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;.
+                    Each element represents a different level of content in the document;
+                    &lt;h1&gt; represents the main heading, &lt;h2&gt; represents subheadings,
+                    &lt;h3&gt; represents sub-subheadings, and so on.
+                </p>
+            </p>
+            <h2>Implementing structural hierarchy</h2>
+            <p>
+                It's really up to you what the elements involved represent, as long as
+                the hierarchy makes sense. You just need to bear in mind a few best practices
+                as you create such structures:
+            </p>
+            <ul>
+                <li>
+                    Preferably, you should use a single &lt;h1&gt; per page—this is the top level
+                    heading, and all others sit below this in the hierarchy.
+                </li>
+                <li>
+                    Make sure you use the headings in the correct order in the hierarchy.
+                    Don't use &lt;h3&gt; elements to represent subheadings, followed by &lt;h2&gt;
+                    elements to represent sub-subheadings—that doesn't make sense
+                    and will lead to weird results.
+                </li>
+                <li>
+                    Of the six heading levels available, you should aim to use no more
+                    than three per page, unless you feel it is necessary.
+                    Documents with many levels (i.e., a deep heading hierarchy) become
+                    unwieldy and difficult to navigate. On such occasions, it is advisable
+                    to spread the content over multiple pages if possible.
+                </li>
+            </ul>
+            <h2>Why do we need structure?</h2>
+            <p>
+                To answer this question, let's take a look at text-start.html—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with linebreaks (Enter/Return pressed to go onto the next line).
+            </p>
+            <p>
+                This is because there are no elements to give the content structure, so the browser does not know what is a heading and what is a paragraph. Furthermore:
+                <ul>
+                    <li>
+                        Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually spend a very short time on a web page.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.
+                    </li>
+                    <li>
+                        Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of SEO (Search Engine Optimization).
+                    </li>
+                    <li>
+                        Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a screen reader. This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.
+                    </li>
+                    <li>
+                        To style content with CSS, or make it do interesting things with JavaScript, you need to have elements wrapping the relevant content, so CSS/JavaScript can effectively target it.
+                    </li>
+                </ul>
+            </p>
+            <h2>Why do we need semantics?</h2>
+            <p>
+                Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)
+            </p>
+            <p>
+                By default, the browser will give it a large font size to make it look like a heading (although you could style it to look like anything you wanted using CSS). More importantly, its semantic value will be used in multiple ways, for example by search engines and screen readers (as mentioned above).
+            </p>
+        </section>
+
+        <section class="main-section" id="Creating_hyperlinks">
+            <header>Creating hyperlinks</header>
+            <h2>What is a hyperlink?</h2>
+            <p>
+                Hyperlinks are one of the most exciting innovations the Web has to offer. They've been a feature of the Web since the beginning, and are what makes the Web a web. Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address. Almost any web content can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address (URL).
+            </p>
+            <h2>Anatomy of a link</h2>
+            <p>
+                A basic link is created by wrapping the text or other content, see Block level links, inside an &lt;a&gt; element and using the href attribute, also known as a Hypertext Reference, or target, that contains the web address. <br><br>
+                <code>
+                    &lt;p&gt;I'm creating a link to <br>
+                    &lt;a href="https://www.mozilla.org/en-US/">the Mozilla homepage&lt;/a&gt;.
+                    &lt;/p&gt;
+                </code>
+                
+            </p>
+            <p>
+                This gives us the following result: <br>
+                I'm creating a link to the <u>Mozilla homepage.</u>
+            </p>
+            <h2>Active learning: creating your own example link</h2>
+            <p>
+                Create an HTML document using your local code editor and our getting started template.
+                <ul>
+                    <li>
+                        Inside the HTML body, add one or more paragraphs or other types of content you already know about.
+                    </li>
+                    <li>
+                        Change some of the content into links.
+                    </li>
+                    <li>
+                        Include title attributes.
+                    </li>
+                </ul>
+            </p>
+            <h2>A quick primer on URLs and paths</h2>
+            <p>
+                To fully understand link targets, you need to understand URLs and file paths. This section gives you the information you need to achieve this.
+            </p>
+            <p>
+                A URL, or Uniform Resource Locator is a string of text that defines where something is located on the Web. For example, Mozilla's English homepage is located at https://www.mozilla.org/en-US/.
+            </p>
+            <p>
+                URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem. Let's look at an example of a directory structure, see the creating-hyperlinks directory.
+
+                A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively
+            </p>
+            <p>
+                The root of this directory structure is called creating-hyperlinks. When working locally with a web site, you'll have one directory that contains the entire site. Inside the root, we have an index.html file and a contacts.html. In a real website, index.html would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).
+            </p>
+            <p>
+                There are also two directories inside our root — pdfs and projects. These each have a single file inside them — a PDF (project-brief.pdf) and an index.html file, respectively. Note that you can have two index.html files in one project, as long as they're in different filesystem locations. The second index.html would perhaps be the main landing page for project-related information.
+            </p>
+            <ul>
+                <h3>Same directory:</h3>
+                <li>
+                    If you wanted to include a hyperlink inside index.html (the top level index.html) pointing to contacts.html, you would specify the filename that you want to link to, because it's in the same directory as the current file. The URL you would use is contacts.html:
+                </li>
+                <h3>Moving down into subdirectories:</h3>
+                <li>
+                    If you wanted to include a hyperlink inside index.html (the top level index.html) pointing to projects/index.html, you would need to go down into the projects directory before indicating the file you want to link to. This is done by specifying the directory's name, then a forward slash, then the name of the file. The URL you would use is projects/index.html:
+                </li>
+                <h3>Moving back up into parent directories:</h3>
+                <li>
+                    If you wanted to include a hyperlink inside projects/index.html pointing to pdfs/project-brief.pdf, you'd have to go up a directory level, then back down into the pdf directory. To go up a directory, use two dots — .. — so the URL you would use is ../pdfs/project-brief.pdf:
+                </li>
+            </ul>
+            <h2>Absolute versus relative URLs</h2>
+            <p>
+                Two terms you'll come across on the Web are absolute URL and relative URL:
+            </p>
+            <h3>absolute URL:</h3>
+            <p>
+                Points to a location defined by its absolute location on the web, including protocol and domain name. For example, if an index.html page is uploaded to a directory called projects that sits inside the root of a web server, and the web site's domain is https://www.example.com, the page would be available at https://www.example.com/projects/index.html (or even just https://www.example.com/projects/, as most web servers just look for a landing page such as index.html to load if it isn't specified in the URL.)
+            </p>
+            <h3>relative URL:</h3>
+            <p>
+                Points to a location that is relative to the file you are linking from, more like what we looked at in the previous section. For example, if we wanted to link from our example file at https://www.example.com/projects/index.html to a PDF file in the same directory, the URL would just be the filename — project-brief.pdf — no extra information needed. If the PDF was available in a subdirectory inside projects called pdfs, the relative link would be pdfs/project-brief.pdf (the equivalent absolute URL would be https://www.example.com/projects/pdfs/project-brief.pdf.)
+            </p>
+            <p>
+                A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our index.html file out of the projects directory and into the root of the web site (the top level, not in any directories), the pdfs/project-brief.pdf relative URL link inside it would now point to a file located at https://www.example.com/pdfs/project-brief.pdf, not a file located at https://www.example.com/projects/pdfs/project-brief.pdf.
+            </p>
+            <p>
+                Of course, the location of the project-brief.pdf file and pdfs folder won't suddenly change because you moved the index.html file — this would make your link point to the wrong place, so it wouldn't work if clicked on. You need to be careful!
+            </p><br>
+        </section>
+
+        <section class="main-section" id="Document_and_website_structure">
+            <header>Document and website structure</header>
+            <h2>Basic sections of a document</h2>
+            <p>
+                Webpages can and will look pretty different from one another, but they all tend to share similar standard components, unless the page is displaying a fullscreen video or game, is part of some kind of art project, or is just badly structured:
+            </p>
+            <ul>
+                <h3>header:</h3>
+                <li>
+                    Usually a big strip across the top with a big heading, logo, and perhaps a tagline. This usually stays the same from one webpage to another.
+                </li>
+                <h3>navigation bar:</h3>
+                <li>
+                    Links to the site's main sections; usually represented by menu buttons, links, or tabs. Like the header, this content usually remains consistent from one webpage to another — having inconsistent navigation on your website will just lead to confused, frustrated users. Many web designers consider the navigation bar to be part of the header rather than an individual component, but that's not a requirement; in fact, some also argue that having the two separate is better for accessibility, as screen readers can read the two features better if they are separate.
+                </li>
+                <h3>main content:</h3>
+                <li>
+                    A big area in the center that contains most of the unique content of a given webpage, for example, the video you want to watch, or the main story you're reading, or the map you want to view, or the news headlines, etc. This is the one part of the website that definitely will vary from page to page!
+                </li>
+                <h3>sidebar:</h3>
+                <li>
+                    Some peripheral info, links, quotes, ads, etc. Usually, this is contextual to what is contained in the main content (for example on a news article page, the sidebar might contain the author's bio, or links to related articles) but there are also cases where you'll find some recurring elements like a secondary navigation system.
+                </li>
+                <h3>footer:</h3>
+                <li>
+                    A strip across the bottom of the page that generally contains fine print, copyright notices, or contact info. It's a place to put common information (like the header) but usually, that information is not critical or secondary to the website itself. The footer is also sometimes used for SEO purposes, by providing links for quick access to popular content.
+                </li>
+            </ul>
+            <p>
+                A "typical website" could be structured something like this:
+                <img src="refges/sample-website.png" alt="">
+            </p>
+            <h2>HTML for structuring content</h2>
+            <p>
+                The simple example shown above isn't pretty, but it is perfectly fine for illustrating a typical website layout example. Some websites have more columns, some are a lot more complex, but you get the idea. With the right CSS, you could use pretty much any elements to wrap around the different sections and get it looking how you wanted, but as discussed before, we need to respect semantics and use the right element for the right job.
+            </p>
+            <p>
+                This is because visuals don't tell the whole story. We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?
+            </p>
+            <p>
+                In your HTML code, you can mark up sections of content based on their functionality — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of consequences of not using the right element structure and semantics for the right job.
+            </p>
+            <p>
+                To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:
+            </p>
+            <ul>
+                <li><b>header:</b> &lt;header&gt;.</li>
+                <li><b>navigation bar:</b> &lt;nav&gt;.</li>
+                <li><b>main content:</b> &lt;main&gt;, with various content subsections represented by &lt;article&gt;, &lt;section&gt;, and &lt;div&gt; elements.&lt;/li&gt;
+                <li><b>sidebar:</b> &lt;aside&gt;; often placed inside &lt;main&gt;.&lt;/li&gt;
+                <li><b>footer:</b> &lt;footer&gt;.&lt;/li&gt;
+            </ul>
+            <h2>Planning a simple website</h2>
+            <p>
+                Once you've planned out the structure of a simple webpage, the next logical step is to try to work out what content you want to put on a whole website, what pages you need, and how they should be arranged and link to one another for the best possible user experience. This is called Information architecture. In a large, complex website, a lot of planning can go into this process, but for a simple website of a few pages, this can be fairly simple, and fun!
+            </p>
+            <ul>
+                <li>
+                    Bear in mind that you'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page.
+                </li>
+                <li>
+                    Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.
+                </li>
+                <li>
+                    Now, brainstorm all the other (not common to every page) content you want to have on your website — write a big list down.
+                </li>
+                <li>
+                    Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called Card sorting.
+                </li>
+                <li>
+                    Now try to sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the center, and link to most if not all of the others; most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="form_section">
+            <div class="heading">
+                <h1 id="title">Designers choice</h1>
+                <p id="description">
+                    tell us your picks for the designers tools.
+                </p>
+            </div>
+            <form action="" id="survey-form" autocomplete="off">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="enter your name" required><br>
+
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="enter your email address" required><br>
+
+                <label for="number" id="number-label">Age</label>
+                <input type="number" name="number" id="number" placeholder="your age" min="15" max="70" required><br>
+
+                <label for="dropdown">occupation</label>
+                <select name="dropdown" id="dropdown">
+                    <option value="front-end designer">front-end designer</option>
+                    <option value="layout designer">layout designer</option>
+                    <option value="pixel editor">pixel editor</option>
+                    <option value="vector editor">vector editor</option>
+                    <option value="typographer">typographer</option>
+                </select><br>
+
+                <fieldset>
+                    <legend>vote one (design tool of the year)</legend>
+                    
+                    <label for="photoshop">photoshop</label>
+                    <input type="radio" name="radio" id="photoshop" value="photoshop" required> 
+                    <label for="figma">figma</label>
+                    <input type="radio" name="radio" id="figma" value="figma"> 
+                    <label for="illustrator">illustrator</label>
+                    <input type="radio" name="radio" id="illustrator" value="figma">
+                </fieldset>
+
+                <fieldset>
+                    <legend>what are your choices</legend>
+                    <label for="a-photoshop">photoshop</label>
+                    <input type="checkbox" name="cxbx" id="a-photoshop" value="photoshop">
+                    <label for="lightroom">lightroom</label>
+                    <input type="checkbox" name="cxbx" id="lightroom" value="lightroom">
+                    <label for="gimp">Gimp</label>
+                    <input type="checkbox" name="cxbx" id="gimp" value="gimp">
+                    <label for="figma1">figma</label>
+                    <input type="checkbox" name="cxbx" id="figma1" value="figma">
+                    <label for="adobe-xd">xd</label>
+                    <input type="checkbox" name="cxbx" id="adobe-xd" value="adobe-xd">
+                    <label for="sketch">sketch</label>
+                    <input type="checkbox" name="cxbx" id="sketch" value="sketch">
+                </fieldset>
+                
+                <label for="text-area">Any note</label><br>
+                <textarea name="text-area" id="text-area" cols="30" rows="10" placeholder="type here..."></textarea><br>
+
+                <button type="submit" id="submit" name="submit">submit</button>
+            </form>
+        </section>    
+        
+        <section class="side_section">
+            <p>
+                This <br>
+                is <br>
+                just a <br>
+                sample <br>
+                form.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
